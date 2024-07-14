@@ -91,8 +91,8 @@ function Navbar() {
             </NavLink>
           </li>
           <li className="login">
-            <NavLink to="/Login">
-              <span>Login</span>
+            <NavLink to="/login&signup">
+              <span>Sign Up</span>
               {/* <span>Login</span> */}
             </NavLink>
           </li>

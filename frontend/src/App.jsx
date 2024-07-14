@@ -4,6 +4,7 @@ import Cursor from "./components/Cursor/Cursor";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login&signup" element={<Login />} />
         </Routes>
       </div>
       <Footer />
