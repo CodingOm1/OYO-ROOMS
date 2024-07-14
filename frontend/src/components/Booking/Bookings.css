@@ -1,9 +1,10 @@
 .booking{
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     padding-block: 40px;
+    padding-bottom: 50px;
 }
 
 .box-container-book{
@@ -36,7 +37,7 @@
 
 }
 
-h2{
+.bookBox h2{
     font-size: 18px;
     color: var(--main-color);
     padding: 5px 0;

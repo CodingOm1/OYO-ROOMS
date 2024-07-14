@@ -1,39 +1,39 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  // Li effects Motion
+  useEffect(() => {
+    const listItems = document.querySelectorAll(".links li");
 
-    // Li effects Motion
-    useEffect(() => {
-        const listItems = document.querySelectorAll('.links li');
-    
-        const handleMouseMove = (event) => {
-          const { clientX, clientY } = event;
-    
-          listItems.forEach((li) => {
-            const { left, top, width, height } = li.getBoundingClientRect();
-            const isHovered = (
-              clientX > left - 50 && clientX < left + width + 50 &&
-              clientY > top - 50 && clientY < top + height + 50
-            );
-    
-            if (isHovered) {
-              const x = clientX - (left + width / 2);
-              const y = clientY - (top + height / 2);
-              li.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
-            } else {
-              li.style.transform = `translate(0, 0)`;
-            }
-          });
-        };
-    
-        document.addEventListener('mousemove', handleMouseMove);
-    
-        return () => {
-          document.removeEventListener('mousemove', handleMouseMove);
-        };
-      }, []);
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event;
+
+      listItems.forEach((li) => {
+        const { left, top, width, height } = li.getBoundingClientRect();
+        const isHovered =
+          clientX > left - 50 &&
+          clientX < left + width + 50 &&
+          clientY > top - 50 &&
+          clientY < top + height + 50;
+
+        if (isHovered) {
+          const x = clientX - (left + width / 2);
+          const y = clientY - (top + height / 2);
+          li.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        } else {
+          li.style.transform = `translate(0, 0)`;
+        }
+      });
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="navbar">
@@ -72,21 +72,29 @@ function Navbar() {
           </svg>
         </div>
         <ul className="links">
-          <li >
+          <li>
+            <NavLink to="/">
               <span>Home</span>
-              <span>Home</span>
+              {/* <span>Home</span> */}
+            </NavLink>
           </li>
           <li>
+            <NavLink to="/booking">
               <span>Booking</span>
-              <span>Booking</span>
+              {/* <span>Booking</span> */}
+            </NavLink>
           </li>
           <li>
+            <NavLink to="/locations">
               <span>Centres</span>
-              <span>Centres</span>
+              {/* <span>Centres</span> */}
+            </NavLink>
           </li>
           <li className="login">
+            <NavLink to="/Login">
               <span>Login</span>
-              <span>Login</span>
+              {/* <span>Login</span> */}
+            </NavLink>
           </li>
         </ul>
       </nav>
