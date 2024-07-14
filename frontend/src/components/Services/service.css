@@ -1,0 +1,71 @@
+.service{
+    width: 100%;
+    min-height: 100vh;
+    padding-block: 20px;
+}
+#main-service-heading{
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 15px;
+}
+.services-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+}
+.serviceBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    padding: 20px 15px;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+}
+.serviceBox .infoService{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 15px;
+    max-width: 600px;
+}
+.infoService h4{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 5px;
+}
+.infoService h2{
+    font-size: 1.7rem;
+    color: var(--black);
+}
+.infoService p{
+    margin-top: -10px;
+    font-size: 1rem;
+    color: var(--black);
+}
+.infoService .btn-flex{
+    width: 300px;
+    height: auto;
+    padding-inline: 20px;
+}
+.serviceShow {
+    width: 400px;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: 5px 7px 5px 1px #555;
+    object-fit: cover;
+    overflow: hidden;
+}
+.serviceShow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
