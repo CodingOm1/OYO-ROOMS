@@ -20,6 +20,7 @@
   
   .links li {
     position: relative;
+    transition: .4s all;
   }
   
   .links li a {
@@ -58,9 +59,7 @@
     transform-origin: left center;
   }
   
- .links li{
-    transition: .5s ease-in-out;
- }
+
   .login {
     margin-left: 5vw;
     border: 1px solid #000;
