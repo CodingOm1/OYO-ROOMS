@@ -1,7 +1,7 @@
 .cursor{
-    width: 60px;
-    opacity: 1;
-    height: 60px;
+    width: 20px;
+    opacity: 0;
+    height: 20px;
     background: transparent;
     border-radius: 50px;
     border: 1px solid #000;

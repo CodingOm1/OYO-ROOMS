@@ -8,7 +8,7 @@ import BookingS from "../../components/Booking/Booking";
 
 function Home() {
   return (
-    <>
+    < >
       <Header />
       <Service />
       <BookingS />
